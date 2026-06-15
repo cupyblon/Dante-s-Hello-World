@@ -1,0 +1,4 @@
+# iron_ingot — Tier 2 Uncommon
+scoreboard players set @s robot_timer 650
+execute store result score @s robot_rng run random value 1..400
+scoreboard players operation @s robot_timer += @s robot_rng

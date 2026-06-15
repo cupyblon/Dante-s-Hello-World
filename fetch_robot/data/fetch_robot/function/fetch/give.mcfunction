@@ -1,0 +1,27 @@
+# Give item based on robot_item score
+execute if score @s robot_item matches 1  run give @s minecraft:dirt 1
+execute if score @s robot_item matches 2  run give @s minecraft:cobblestone 1
+execute if score @s robot_item matches 3  run give @s minecraft:oak_log 1
+execute if score @s robot_item matches 4  run give @s minecraft:sand 1
+execute if score @s robot_item matches 5  run give @s minecraft:gravel 1
+execute if score @s robot_item matches 6  run give @s minecraft:wheat 1
+execute if score @s robot_item matches 7  run give @s minecraft:coal 1
+execute if score @s robot_item matches 8  run give @s minecraft:iron_ingot 1
+execute if score @s robot_item matches 9  run give @s minecraft:leather 1
+execute if score @s robot_item matches 10 run give @s minecraft:feather 1
+execute if score @s robot_item matches 11 run give @s minecraft:string 1
+execute if score @s robot_item matches 12 run give @s minecraft:bread 1
+execute if score @s robot_item matches 13 run give @s minecraft:gold_ingot 1
+execute if score @s robot_item matches 14 run give @s minecraft:lapis_lazuli 1
+execute if score @s robot_item matches 15 run give @s minecraft:redstone 1
+execute if score @s robot_item matches 16 run give @s minecraft:ender_pearl 1
+execute if score @s robot_item matches 17 run give @s minecraft:name_tag 1
+execute if score @s robot_item matches 18 run give @s minecraft:clock 1
+execute if score @s robot_item matches 19 run give @s minecraft:diamond 1
+execute if score @s robot_item matches 20 run give @s minecraft:emerald 1
+execute if score @s robot_item matches 21 run give @s minecraft:blaze_rod 1
+execute if score @s robot_item matches 22 run give @s minecraft:slime_ball 1
+execute if score @s robot_item matches 23 run give @s minecraft:netherite_ingot 1
+execute if score @s robot_item matches 24 run give @s minecraft:elytra 1
+execute if score @s robot_item matches 25 run give @s minecraft:totem_of_undying 1
+execute if score @s robot_item matches 26 run give @s minecraft:nether_star 1

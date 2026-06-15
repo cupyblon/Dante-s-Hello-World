@@ -1,0 +1,38 @@
+# ─────────────────────────────────────────────
+#  Robot Fetch — Item selection menu
+# ─────────────────────────────────────────────
+
+# Guard: robot already out
+execute if score @s robot_active matches 1 run tellraw @s [{"text":"[","color":"dark_gray"},{"text":"Fetch-Bot","color":"aqua"},{"text":"]","color":"dark_gray"},{"text":" Your robot is still out! Wait for it to return.","color":"red"}]
+execute if score @s robot_active matches 1 run return 0
+
+tellraw @s {"text":""}
+tellraw @s [{"text":"━━━━━━ ","color":"dark_gray"},{"text":"🤖 Robot Fetch","color":"gold","bold":true},{"text":" ━━━━━━","color":"dark_gray"}]
+tellraw @s [{"text":"Click an item to dispatch your robot!","color":"gray","italic":true}]
+tellraw @s {"text":""}
+
+tellraw @s [{"text":"⬡ ","color":"green"},{"text":"COMMON","color":"green","bold":true},{"text":" (fast, ~5-20s)","color":"dark_green"}]
+tellraw @s [{"text":"  "},{"text":"[Dirt]","color":"white","underlined":true,"clickEvent":{"action":"run_command","value":"/trigger robot_fetch set 1"},"hoverEvent":{"action":"show_text","value":"🤖 Fetch: Dirt\n⏱ ~5-20 seconds"}},{"text":"  "},{"text":"[Cobblestone]","color":"white","underlined":true,"clickEvent":{"action":"run_command","value":"/trigger robot_fetch set 2"},"hoverEvent":{"action":"show_text","value":"🤖 Fetch: Cobblestone\n⏱ ~5-20 seconds"}},{"text":"  "},{"text":"[Oak Log]","color":"white","underlined":true,"clickEvent":{"action":"run_command","value":"/trigger robot_fetch set 3"},"hoverEvent":{"action":"show_text","value":"🤖 Fetch: Oak Log\n⏱ ~5-20 seconds"}}]
+tellraw @s [{"text":"  "},{"text":"[Sand]","color":"white","underlined":true,"clickEvent":{"action":"run_command","value":"/trigger robot_fetch set 4"},"hoverEvent":{"action":"show_text","value":"🤖 Fetch: Sand\n⏱ ~5-20 seconds"}},{"text":"  "},{"text":"[Gravel]","color":"white","underlined":true,"clickEvent":{"action":"run_command","value":"/trigger robot_fetch set 5"},"hoverEvent":{"action":"show_text","value":"🤖 Fetch: Gravel\n⏱ ~5-20 seconds"}},{"text":"  "},{"text":"[Wheat]","color":"white","underlined":true,"clickEvent":{"action":"run_command","value":"/trigger robot_fetch set 6"},"hoverEvent":{"action":"show_text","value":"🤖 Fetch: Wheat\n⏱ ~5-20 seconds"}}]
+
+tellraw @s {"text":""}
+tellraw @s [{"text":"⬡ ","color":"yellow"},{"text":"UNCOMMON","color":"yellow","bold":true},{"text":" (moderate, ~30-60s)","color":"gold"}]
+tellraw @s [{"text":"  "},{"text":"[Coal]","color":"white","underlined":true,"clickEvent":{"action":"run_command","value":"/trigger robot_fetch set 7"},"hoverEvent":{"action":"show_text","value":"🤖 Fetch: Coal\n⏱ ~30-60 seconds"}},{"text":"  "},{"text":"[Iron Ingot]","color":"white","underlined":true,"clickEvent":{"action":"run_command","value":"/trigger robot_fetch set 8"},"hoverEvent":{"action":"show_text","value":"🤖 Fetch: Iron Ingot\n⏱ ~30-60 seconds"}},{"text":"  "},{"text":"[Leather]","color":"white","underlined":true,"clickEvent":{"action":"run_command","value":"/trigger robot_fetch set 9"},"hoverEvent":{"action":"show_text","value":"🤖 Fetch: Leather\n⏱ ~30-60 seconds"}}]
+tellraw @s [{"text":"  "},{"text":"[Feather]","color":"white","underlined":true,"clickEvent":{"action":"run_command","value":"/trigger robot_fetch set 10"},"hoverEvent":{"action":"show_text","value":"🤖 Fetch: Feather\n⏱ ~30-60 seconds"}},{"text":"  "},{"text":"[String]","color":"white","underlined":true,"clickEvent":{"action":"run_command","value":"/trigger robot_fetch set 11"},"hoverEvent":{"action":"show_text","value":"🤖 Fetch: String\n⏱ ~30-60 seconds"}},{"text":"  "},{"text":"[Bread]","color":"white","underlined":true,"clickEvent":{"action":"run_command","value":"/trigger robot_fetch set 12"},"hoverEvent":{"action":"show_text","value":"🤖 Fetch: Bread\n⏱ ~30-60 seconds"}}]
+
+tellraw @s {"text":""}
+tellraw @s [{"text":"⬡ ","color":"aqua"},{"text":"RARE","color":"aqua","bold":true},{"text":" (slow, ~90-160s)","color":"dark_aqua"}]
+tellraw @s [{"text":"  "},{"text":"[Gold Ingot]","color":"white","underlined":true,"clickEvent":{"action":"run_command","value":"/trigger robot_fetch set 13"},"hoverEvent":{"action":"show_text","value":"🤖 Fetch: Gold Ingot\n⏱ ~90-160 seconds"}},{"text":"  "},{"text":"[Lapis Lazuli]","color":"white","underlined":true,"clickEvent":{"action":"run_command","value":"/trigger robot_fetch set 14"},"hoverEvent":{"action":"show_text","value":"🤖 Fetch: Lapis Lazuli\n⏱ ~90-160 seconds"}},{"text":"  "},{"text":"[Redstone]","color":"white","underlined":true,"clickEvent":{"action":"run_command","value":"/trigger robot_fetch set 15"},"hoverEvent":{"action":"show_text","value":"🤖 Fetch: Redstone\n⏱ ~90-160 seconds"}}]
+tellraw @s [{"text":"  "},{"text":"[Ender Pearl]","color":"white","underlined":true,"clickEvent":{"action":"run_command","value":"/trigger robot_fetch set 16"},"hoverEvent":{"action":"show_text","value":"🤖 Fetch: Ender Pearl\n⏱ ~90-160 seconds"}},{"text":"  "},{"text":"[Name Tag]","color":"white","underlined":true,"clickEvent":{"action":"run_command","value":"/trigger robot_fetch set 17"},"hoverEvent":{"action":"show_text","value":"🤖 Fetch: Name Tag\n⏱ ~90-160 seconds"}},{"text":"  "},{"text":"[Clock]","color":"white","underlined":true,"clickEvent":{"action":"run_command","value":"/trigger robot_fetch set 18"},"hoverEvent":{"action":"show_text","value":"🤖 Fetch: Clock\n⏱ ~90-160 seconds"}}]
+
+tellraw @s {"text":""}
+tellraw @s [{"text":"⬡ ","color":"light_purple"},{"text":"EPIC","color":"light_purple","bold":true},{"text":" (very slow, ~4-6 min)","color":"dark_purple"}]
+tellraw @s [{"text":"  "},{"text":"[Diamond]","color":"aqua","underlined":true,"clickEvent":{"action":"run_command","value":"/trigger robot_fetch set 19"},"hoverEvent":{"action":"show_text","value":"🤖 Fetch: Diamond\n⏱ ~4-6 minutes"}},{"text":"  "},{"text":"[Emerald]","color":"green","underlined":true,"clickEvent":{"action":"run_command","value":"/trigger robot_fetch set 20"},"hoverEvent":{"action":"show_text","value":"🤖 Fetch: Emerald\n⏱ ~4-6 minutes"}},{"text":"  "},{"text":"[Blaze Rod]","color":"gold","underlined":true,"clickEvent":{"action":"run_command","value":"/trigger robot_fetch set 21"},"hoverEvent":{"action":"show_text","value":"🤖 Fetch: Blaze Rod\n⏱ ~4-6 minutes"}},{"text":"  "},{"text":"[Slimeball]","color":"green","underlined":true,"clickEvent":{"action":"run_command","value":"/trigger robot_fetch set 22"},"hoverEvent":{"action":"show_text","value":"🤖 Fetch: Slimeball\n⏱ ~4-6 minutes"}}]
+
+tellraw @s {"text":""}
+tellraw @s [{"text":"⬡ ","color":"red"},{"text":"LEGENDARY","color":"red","bold":true},{"text":" (extreme, ~10-25 min)","color":"dark_red"}]
+tellraw @s [{"text":"  "},{"text":"[Netherite Ingot]","color":"dark_gray","underlined":true,"clickEvent":{"action":"run_command","value":"/trigger robot_fetch set 23"},"hoverEvent":{"action":"show_text","value":"🤖 Fetch: Netherite Ingot\n⏱ ~10-25 minutes"}},{"text":"  "},{"text":"[Elytra]","color":"light_purple","underlined":true,"clickEvent":{"action":"run_command","value":"/trigger robot_fetch set 24"},"hoverEvent":{"action":"show_text","value":"🤖 Fetch: Elytra\n⏱ ~10-25 minutes"}}]
+tellraw @s [{"text":"  "},{"text":"[Totem of Undying]","color":"gold","underlined":true,"clickEvent":{"action":"run_command","value":"/trigger robot_fetch set 25"},"hoverEvent":{"action":"show_text","value":"🤖 Fetch: Totem of Undying\n⏱ ~10-25 minutes"}},{"text":"  "},{"text":"[Nether Star]","color":"yellow","underlined":true,"clickEvent":{"action":"run_command","value":"/trigger robot_fetch set 26"},"hoverEvent":{"action":"show_text","value":"🤖 Fetch: Nether Star\n⏱ ~10-25 minutes"}}]
+
+tellraw @s {"text":""}
+tellraw @s [{"text":"━━━━━━━━━━━━━━━━━━━━━","color":"dark_gray"}]

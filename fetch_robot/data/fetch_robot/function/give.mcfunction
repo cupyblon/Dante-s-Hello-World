@@ -1,0 +1,2 @@
+# Give the Robot Caller item to the nearest player
+give @p carrot_on_a_stick[custom_name='{"italic":false,"color":"gold","bold":true,"text":"🤖 Robot Caller"}',lore=['{"italic":false,"color":"gray","text":"Hold this item, then type:"}','{"italic":false,"color":"aqua","text":"/trigger robot_menu"}','{"italic":false,"color":"gray","text":"to open the fetch menu!"}'],enchantments={"levels":{"minecraft:unbreaking":10}},attribute_modifiers=[]]
